@@ -13,7 +13,7 @@ public class D20 {
             difficulty = "简单",
             link = "https://leetcode.cn/problems/two-sum/?envType=study-plan-v2&envId=top-100-liked"
     )
-    static class Solution {
+    static class Solution1 {
         /**
          * 从前面的数中找是否存在目标差值，map 的记录方式保证了返回的索引不同
          * 如果在一开始就全部记入 map，可能要先删除自身再进行查找，浪费资源
