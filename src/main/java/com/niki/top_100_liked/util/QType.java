@@ -10,6 +10,11 @@ import java.lang.annotation.Target;
 // 注解保留到运行时，以便反射读取
 @Retention(RetentionPolicy.RUNTIME)
 public @interface QType {
-    // 题目类型，例如 "双指针"
-    String value();
+    String name();
+
+    String type();
+
+    String difficulty();
+
+    String link();
 }

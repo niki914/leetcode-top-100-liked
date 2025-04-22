@@ -6,11 +6,12 @@ import java.util.*;
 
 public class D21 {
 
-    /**
-     * 字母异位词分组
-     * https://leetcode.cn/problems/group-anagrams/description/?envType=study-plan-v2&envId=top-100-liked
-     */
-    @QType("哈希")
+    @QType(
+            name = "字母异位词分组",
+            type = "哈希",
+            difficulty = "中等",
+            link = "https://leetcode.cn/problems/group-anagrams/description/?envType=study-plan-v2&envId=top-100-liked"
+    )
     static class Solution1 {
         // 简单哈希算法，用于计算字母频次数组的哈希值
         private int hash(int[] arr) {
@@ -52,11 +53,12 @@ public class D21 {
         }
     }
 
-    /**
-     * 最长连续序列
-     * https://leetcode.cn/problems/longest-consecutive-sequence/?envType=study-plan-v2&envId=top-100-liked
-     */
-    @QType("哈希")
+    @QType(
+            name = "最长连续序列",
+            type = "哈希",
+            difficulty = "中等",
+            link = "https://leetcode.cn/problems/longest-consecutive-sequence/?envType=study-plan-v2&envId=top-100-liked"
+    )
     static class Solution2 {
         public int longestConsecutive(int[] nums) {
             Set<Integer> set = new HashSet<>();
@@ -89,11 +91,12 @@ public class D21 {
         }
     }
 
-    /**
-     * 移动零
-     * https://leetcode.cn/problems/move-zeroes/?envType=study-plan-v2&envId=top-100-liked
-     */
-    @QType("双指针")
+    @QType(
+            name = "移动零",
+            type = "双指针",
+            difficulty = "简单",
+            link = "https://leetcode.cn/problems/move-zeroes/?envType=study-plan-v2&envId=top-100-liked"
+    )
     static class Solution3 {
         public void moveZeroes(int[] nums) {
             int leftP = 0;

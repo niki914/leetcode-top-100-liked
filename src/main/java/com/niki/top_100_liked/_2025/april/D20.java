@@ -7,11 +7,12 @@ import java.util.Map;
 
 public class D20 {
 
-    /**
-     * 两数之和
-     * https://leetcode.cn/problems/two-sum/?envType=study-plan-v2&envId=top-100-liked
-     */
-    @QType("哈希")
+    @QType(
+            name = "两数之和",
+            type = "哈希",
+            difficulty = "简单",
+            link = "https://leetcode.cn/problems/two-sum/?envType=study-plan-v2&envId=top-100-liked"
+    )
     static class Solution {
         /**
          * 从前面的数中找是否存在目标差值，map 的记录方式保证了返回的索引不同
