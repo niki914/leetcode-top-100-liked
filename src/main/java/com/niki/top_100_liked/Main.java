@@ -1,4 +1,4 @@
-package com.niki.top_100_liked;
+﻿package com.niki.top_100_liked;
 
 import com.niki.top_100_liked.util.QScanner;
 
