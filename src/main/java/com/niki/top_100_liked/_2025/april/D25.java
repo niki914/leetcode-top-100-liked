@@ -73,15 +73,18 @@ public class D25 {
         int maxLength = 0;
         Map<Character, Integer> charIndexMap = new HashMap<>();
 
+        // z x c >> [ a s d] >> ...
         for (int index = 0; index < s.length(); index++) {
             char currentChar = s.charAt(index);
 
-            // 如果字符重复且在当前窗口内，移动窗口起始位置
+            // 如果遇到窗口内已有的字符(pos >= winStart 说明该字符在窗口内)
+            // 移动窗口起始位置, 也就是左边界(这将收缩窗口, 抛弃旧的字符)
+            // [a, b, c] a --> a [b c] a
             if (charIndexMap.containsKey(currentChar) && charIndexMap.get(currentChar) >= windowStart) {
                 windowStart = charIndexMap.get(currentChar) + 1;
-            } else {
-                // 更新最长子串长度
-                maxLength = Math.max(maxLength, index - windowStart + 1);
+            } else { // 出现的是新字符, 更新最长子串长度
+                int _maxLength = index - windowStart + 1;
+                maxLength = Math.max(maxLength, _maxLength);
             }
 
             // 记录当前字符的最新索引
