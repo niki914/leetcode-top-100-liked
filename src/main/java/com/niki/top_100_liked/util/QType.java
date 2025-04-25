@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 // 注解作用于类
-@Target(ElementType.TYPE)
+@Target({ElementType.METHOD, ElementType.TYPE})
 // 注解保留到运行时，以便反射读取
 @Retention(RetentionPolicy.RUNTIME)
 public @interface QType {
