@@ -11,45 +11,32 @@ public class D21 {
             difficulty = "中等",
             link = "https://leetcode.cn/problems/group-anagrams/description/?envType=study-plan-v2&envId=top-100-liked"
     )
-    static class GroupAnagrams {
-        // 简单哈希算法，用于计算字母频次数组的哈希值
-        private int hash(int[] arr) {
-            int v = 0;
-            for (int j : arr) {
-                v = v * 31 + j; // 哈希因子
-            }
-            return v;
+    public List<List<String>> groupAnagrams(String[] strs) {
+        if (strs == null || strs.length == 0) {
+            return new ArrayList<>();
         }
 
-        // 创建字母频次数组并返回哈希值
-        private int countLetters(String str) {
-            int[] arr = new int[26];
+        Map<Integer, List<String>> map = new HashMap<>();
 
-            for (char c : str.toCharArray()) {
-                arr[c - 'a']++; // 字符编码直接作差，a直接对应索引0
+        // 计算字符串的异位词哈希并写入 map
+        for (String s : strs) {
+            // 统计字符频率
+            int[] charCount = new int[26];
+            for (char c : s.toCharArray()) {
+                charCount[c - 'a']++; // 字符编码直接作差, a 直接对应索引 0
             }
 
-            return hash(arr);
-        }
-
-        public List<List<String>> groupAnagrams(String[] strs) {
-            Map<Integer, List<String>> map = new HashMap<>();
-
-            for (String s : strs) {
-                int key = countLetters(s);
-
-                // 计算字符串的异位词哈希并写入map
-                if (map.containsKey(key)) {
-                    map.get(key).add(s);
-                } else {
-                    List<String> list = new ArrayList<>();
-                    list.add(s);
-                    map.put(key, list);
-                }
+            // 计算频率数组的哈希值
+            int hash = 0;
+            for (int count : charCount) {
+                hash = hash * 31 + count; // 31 是一个比较好的哈希因子
             }
 
-            return new ArrayList<>(map.values());
+            // 分组存储
+            map.computeIfAbsent(hash, k -> new ArrayList<>()).add(s);
         }
+
+        return new ArrayList<>(map.values());
     }
 
     @QType(
