@@ -1,11 +1,11 @@
-package com.niki.top_100_liked._2025.april;
+package com.niki.top_100_liked._2025._4;
 
-import com.niki.top_100_liked.util.QType;
+import com.niki.top_100_liked.util.annotation.QuestionInfo;
 
 import java.util.*;
 
 public class D21 {
-    @QType(
+    @QuestionInfo(
             name = "字母异位词分组",
             type = "哈希",
             difficulty = "中等",
@@ -39,7 +39,7 @@ public class D21 {
         return new ArrayList<>(map.values());
     }
 
-    @QType(
+    @QuestionInfo(
             name = "最长连续序列",
             type = "哈希",
             difficulty = "中等",
@@ -75,7 +75,7 @@ public class D21 {
         return max;
     }
 
-    @QType(
+    @QuestionInfo(
             name = "移动零",
             type = "双指针",
             difficulty = "简单",

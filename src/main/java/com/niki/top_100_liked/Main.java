@@ -1,22 +1,26 @@
 package com.niki.top_100_liked;
 
-import com.niki.top_100_liked.util.QScanner;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.niki.top_100_liked.util.finder.QuestionFinder;
+import com.niki.top_100_liked.util.finder.SuspendQuestionFinder;
 
 import java.util.List;
 
 public class Main {
-    private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) throws Exception {
-        List<String> list = QScanner.findQuestions(
-//                qType -> qType.name().contains("移动") && "双指针".equals(qType.type())
-                qType -> true
+        List<String> list1 = new QuestionFinder().find(
+//                info -> info.name().contains("移动") && "双指针".equals(info.type())
+                info -> true
         );
 
-        list.forEach(System.out::println);
-        System.out.println("共 " + list.size() + " 题");
-//        throw new Exception("asd");
+        List<String> list2 = new SuspendQuestionFinder().find(
+//                info -> info.name().contains("移动")
+                info -> true
+        );
+
+        list1.forEach(System.out::println);
+        System.out.println("已记录: 共 " + list1.size() + " 题");
+        list2.forEach(System.out::println);
+        System.out.println("未完成: 共 " + list2.size() + " 题");
     }
 }

@@ -1,12 +1,12 @@
-package com.niki.top_100_liked._2025.april;
+package com.niki.top_100_liked._2025._4;
 
-import com.niki.top_100_liked.util.QType;
+import com.niki.top_100_liked.util.annotation.QuestionInfo;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class D25 {
-    @QType(
+    @QuestionInfo(
             name = "接雨水",
             type = "双指针",
             difficulty = "困难",
@@ -60,7 +60,7 @@ public class D25 {
         return water;
     }
 
-    @QType(
+    @QuestionInfo(
             name = "无重复字符的最长子串",
             type = "滑动窗口",
             difficulty = "中等",

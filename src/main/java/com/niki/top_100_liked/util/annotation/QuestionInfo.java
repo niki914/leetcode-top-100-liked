@@ -1,4 +1,4 @@
-package com.niki.top_100_liked.util;
+package com.niki.top_100_liked.util.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.METHOD, ElementType.TYPE})
 // 注解保留到运行时，以便反射读取
 @Retention(RetentionPolicy.RUNTIME)
-public @interface QType {
+public @interface QuestionInfo {
     String name();
 
     String type();

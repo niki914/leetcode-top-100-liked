@@ -1,6 +1,6 @@
-package com.niki.top_100_liked._2025.april;
+package com.niki.top_100_liked._2025._4;
 
-import com.niki.top_100_liked.util.QType;
+import com.niki.top_100_liked.util.annotation.QuestionInfo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import java.util.List;
 import static java.lang.Math.min;
 
 public class D22 {
-    @QType(
+    @QuestionInfo(
             name = "乘最多水的容器",
             type = "双指针",
             difficulty = "中等",
@@ -41,7 +41,7 @@ public class D22 {
         return max;
     }
 
-    @QType(
+    @QuestionInfo(
             name = "三数之和",
             type = "双指针",
             difficulty = "中等",

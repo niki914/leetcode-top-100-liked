@@ -1,12 +1,12 @@
-package com.niki.top_100_liked._2025.april;
+package com.niki.top_100_liked._2025._4;
 
-import com.niki.top_100_liked.util.QType;
+import com.niki.top_100_liked.util.annotation.QuestionInfo;
 
 import java.util.*;
 
 public class D27 {
 
-    @QType(
+    @QuestionInfo(
             name = "找到字符串中所有字母异位词",
             type = "滑动窗口",
             difficulty = "中等",
@@ -53,7 +53,7 @@ public class D27 {
         return startIndices;
     }
 
-    @QType(
+    @QuestionInfo(
             name = "和为 K 的子数组",
             type = "子串",
             difficulty = "中等",
