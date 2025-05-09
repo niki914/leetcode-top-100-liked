@@ -1,6 +1,8 @@
 package com.niki.top_100_liked._2025._4;
 
+import com.niki.top_100_liked.util.annotation.Diff;
 import com.niki.top_100_liked.util.annotation.QuestionInfo;
+import com.niki.top_100_liked.util.annotation.Type;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -8,8 +10,8 @@ import java.util.Deque;
 public class D28 {
     @QuestionInfo(
             name = "滑动窗口最大值",
-            type = "子串",
-            difficulty = "困难",
+            type = Type.Substring,
+            difficulty = Diff.HARD,
             link = "https://leetcode.cn/problems/sliding-window-maximum/?envType=study-plan-v2&envId=top-100-liked"
     )
     public int[] findMaxSlidingWindow(int[] nums, int k) {

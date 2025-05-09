@@ -1,6 +1,8 @@
 package com.niki.top_100_liked._2025._5;
 
+import com.niki.top_100_liked.util.annotation.Diff;
 import com.niki.top_100_liked.util.annotation.QuestionInfo;
+import com.niki.top_100_liked.util.annotation.Type;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,8 +12,8 @@ public class D7 {
 
     @QuestionInfo(
             name = "最大子数组和",
-            type = "普通数组",
-            difficulty = "中等",
+            type = Type.Array,
+            difficulty = Diff.MEDIUM,
             link = "https://leetcode.cn/problems/maximum-subarray/description/?envType=study-plan-v2&envId=top-100-liked"
     )
     public int maxSubArray(int[] nums) {
@@ -36,8 +38,8 @@ public class D7 {
 
     @QuestionInfo(
             name = "合并区间",
-            type = "普通数组",
-            difficulty = "中等",
+            type = Type.Array,
+            difficulty = Diff.MEDIUM,
             link = "https://leetcode.cn/problems/merge-intervals/description/?envType=study-plan-v2&envId=top-100-liked"
     )
     public int[][] merge(int[][] intervals) {
@@ -71,8 +73,8 @@ public class D7 {
 
     @QuestionInfo(
             name = "轮转数组",
-            type = "普通数组",
-            difficulty = "中等",
+            type = Type.Array,
+            difficulty = Diff.MEDIUM,
             link = "https://leetcode.cn/problems/rotate-array/description/?envType=study-plan-v2&envId=top-100-liked"
     )
     public static class Rotate {

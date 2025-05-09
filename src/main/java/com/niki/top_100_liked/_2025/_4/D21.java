@@ -1,14 +1,16 @@
 package com.niki.top_100_liked._2025._4;
 
+import com.niki.top_100_liked.util.annotation.Diff;
 import com.niki.top_100_liked.util.annotation.QuestionInfo;
+import com.niki.top_100_liked.util.annotation.Type;
 
 import java.util.*;
 
 public class D21 {
     @QuestionInfo(
             name = "字母异位词分组",
-            type = "哈希",
-            difficulty = "中等",
+            type = Type.Hash,
+            difficulty = Diff.MEDIUM,
             link = "https://leetcode.cn/problems/group-anagrams/description/?envType=study-plan-v2&envId=top-100-liked"
     )
     public List<List<String>> groupAnagrams(String[] strs) {
@@ -41,8 +43,8 @@ public class D21 {
 
     @QuestionInfo(
             name = "最长连续序列",
-            type = "哈希",
-            difficulty = "中等",
+            type = Type.Hash,
+            difficulty = Diff.MEDIUM,
             link = "https://leetcode.cn/problems/longest-consecutive-sequence/?envType=study-plan-v2&envId=top-100-liked"
     )
     public int longestConsecutive(int[] nums) {
@@ -77,8 +79,8 @@ public class D21 {
 
     @QuestionInfo(
             name = "移动零",
-            type = "双指针",
-            difficulty = "简单",
+            type = Type.TwoPointers,
+            difficulty = Diff.EASY,
             link = "https://leetcode.cn/problems/move-zeroes/?envType=study-plan-v2&envId=top-100-liked"
     )
     public void moveZeroes(int[] nums) {

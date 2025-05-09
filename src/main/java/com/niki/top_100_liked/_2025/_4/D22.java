@@ -1,6 +1,8 @@
 package com.niki.top_100_liked._2025._4;
 
+import com.niki.top_100_liked.util.annotation.Diff;
 import com.niki.top_100_liked.util.annotation.QuestionInfo;
+import com.niki.top_100_liked.util.annotation.Type;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,8 +13,8 @@ import static java.lang.Math.min;
 public class D22 {
     @QuestionInfo(
             name = "乘最多水的容器",
-            type = "双指针",
-            difficulty = "中等",
+            type = Type.TwoPointers,
+            difficulty = Diff.MEDIUM,
             link = "https://leetcode.cn/problems/container-with-most-water/?envType=study-plan-v2&envId=top-100-liked"
     )
     public int maxArea(int[] heights) {
@@ -43,8 +45,8 @@ public class D22 {
 
     @QuestionInfo(
             name = "三数之和",
-            type = "双指针",
-            difficulty = "中等",
+            type = Type.TwoPointers,
+            difficulty = Diff.MEDIUM,
             link = "https://leetcode.cn/problems/3sum/?envType=study-plan-v2&envId=top-100-liked"
     )
     public List<List<Integer>> threeSum(int[] nums) {

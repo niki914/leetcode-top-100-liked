@@ -1,6 +1,8 @@
 package com.niki.top_100_liked._2025._4;
 
+import com.niki.top_100_liked.util.annotation.Diff;
 import com.niki.top_100_liked.util.annotation.QuestionInfo;
+import com.niki.top_100_liked.util.annotation.Type;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,8 +10,8 @@ import java.util.Map;
 public class D25 {
     @QuestionInfo(
             name = "接雨水",
-            type = "双指针",
-            difficulty = "困难",
+            type = Type.TwoPointers,
+            difficulty = Diff.HARD,
             link = "https://leetcode.cn/problems/trapping-rain-water/?envType=study-plan-v2&envId=top-100-liked"
     )
     public int trap(int[] height) {
@@ -62,8 +64,8 @@ public class D25 {
 
     @QuestionInfo(
             name = "无重复字符的最长子串",
-            type = "滑动窗口",
-            difficulty = "中等",
+            type = Type.SlidingWindow,
+            difficulty = Diff.MEDIUM,
             link = "https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/?envType=study-plan-v2&envId=top-100-liked"
     )
     public int lengthOfLongestSubstring(String s) {
