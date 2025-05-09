@@ -28,7 +28,7 @@ public class QuestionFinder extends AnnotationFinder<QuestionInfo> {
     protected String formatResult(AnnotationData<QuestionInfo> data) {
         return String.format("%s(%s) [%s(%s.java:%d)]",
                 data.annotation().name(),
-                data.annotation().type(),
+                data.annotation().type().getString(),
                 data.name(),
                 data.fileName(),
                 data.line());
