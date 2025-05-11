@@ -1,15 +1,15 @@
 package com.niki.top_100_liked._2025._5;
 
-import com.niki.top_100_liked.util.annotation.Diff;
+import com.niki.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki.top_100_liked.util.annotation.QuestionInfo;
-import com.niki.top_100_liked.util.annotation.Type;
+import com.niki.top_100_liked.util.annotation.QuestionType;
 
 public class D9 {
 
     @QuestionInfo(
             name = "除自身以外数组的乘积",
-            type = Type.Array,
-            difficulty = Diff.MEDIUM,
+            type = QuestionType.Array,
+            difficulty = QuestionDifficulty.MEDIUM,
             link = "https://leetcode.cn/problems/product-of-array-except-self/description/?envType=study-plan-v2&envId=top-100-liked"
     )
     public int[] productExceptSelf(int[] nums) {
@@ -38,8 +38,8 @@ public class D9 {
 
     @QuestionInfo(
             name = "缺失的第一个正数",
-            type = Type.Array,
-            difficulty = Diff.HARD,
+            type = QuestionType.Array,
+            difficulty = QuestionDifficulty.HARD,
             link = "https://leetcode.cn/problems/first-missing-positive/description/?envType=study-plan-v2&envId=top-100-liked"
     )
     public int firstMissingPositive(int[] nums) {
@@ -87,8 +87,8 @@ public class D9 {
 
     @QuestionInfo(
             name = "矩阵置零",
-            type = Type.Matrix,
-            difficulty = Diff.MEDIUM,
+            type = QuestionType.Matrix,
+            difficulty = QuestionDifficulty.MEDIUM,
             link = "https://leetcode.cn/problems/set-matrix-zeroes/description/?envType=study-plan-v2&envId=top-100-liked"
     )
     public void setZeroes(int[][] matrix) {

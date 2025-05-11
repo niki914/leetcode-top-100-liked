@@ -1,8 +1,8 @@
 package com.niki.top_100_liked._2025._4;
 
-import com.niki.top_100_liked.util.annotation.Diff;
+import com.niki.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki.top_100_liked.util.annotation.QuestionInfo;
-import com.niki.top_100_liked.util.annotation.Type;
+import com.niki.top_100_liked.util.annotation.QuestionType;
 
 import java.util.*;
 
@@ -10,8 +10,8 @@ public class D27 {
 
     @QuestionInfo(
             name = "找到字符串中所有字母异位词",
-            type = Type.SlidingWindow,
-            difficulty = Diff.MEDIUM,
+            type = QuestionType.SlidingWindow,
+            difficulty = QuestionDifficulty.MEDIUM,
             link = "https://leetcode.cn/problems/find-all-anagrams-in-a-string/?envType=study-plan-v2&envId=top-100-liked"
     )
     public List<Integer> findAnagrams(String s, String p) {
@@ -57,8 +57,8 @@ public class D27 {
 
     @QuestionInfo(
             name = "和为 K 的子数组",
-            type = Type.Substring,
-            difficulty = Diff.MEDIUM,
+            type = QuestionType.Substring,
+            difficulty = QuestionDifficulty.MEDIUM,
             link = "https://leetcode.cn/problems/subarray-sum-equals-k/description/?envType=study-plan-v2&envId=top-100-liked"
     )
     public int subarraySum(int[] nums, int k) {

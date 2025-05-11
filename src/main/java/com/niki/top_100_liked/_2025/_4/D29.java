@@ -1,15 +1,15 @@
 package com.niki.top_100_liked._2025._4;
 
-import com.niki.top_100_liked.util.annotation.Diff;
+import com.niki.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki.top_100_liked.util.annotation.QuestionInfo;
 import com.niki.top_100_liked.util.annotation.SuspendQuestion;
-import com.niki.top_100_liked.util.annotation.Type;
+import com.niki.top_100_liked.util.annotation.QuestionType;
 
 public class D29 {
     @QuestionInfo(
             name = "最小覆盖子串",
-            type = Type.Substring,
-            difficulty = Diff.HARD,
+            type = QuestionType.Substring,
+            difficulty = QuestionDifficulty.HARD,
             link = "https://leetcode.cn/problems/minimum-window-substring/description/?envType=study-plan-v2&envId=top-100-liked"
     )
     @SuspendQuestion(

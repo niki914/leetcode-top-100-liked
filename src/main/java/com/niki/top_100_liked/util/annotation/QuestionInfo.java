@@ -12,9 +12,9 @@ import java.lang.annotation.Target;
 public @interface QuestionInfo {
     String name();
 
-    Type type();
+    QuestionType type();
 
-    Diff difficulty();
+    QuestionDifficulty difficulty();
 
     String link();
 }

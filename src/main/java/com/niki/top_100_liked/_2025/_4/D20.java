@@ -1,8 +1,8 @@
 package com.niki.top_100_liked._2025._4;
 
-import com.niki.top_100_liked.util.annotation.Diff;
+import com.niki.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki.top_100_liked.util.annotation.QuestionInfo;
-import com.niki.top_100_liked.util.annotation.Type;
+import com.niki.top_100_liked.util.annotation.QuestionType;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,8 +14,8 @@ public class D20 {
      */
     @QuestionInfo(
             name = "两数之和",
-            type = Type.Hash,
-            difficulty = Diff.EASY,
+            type = QuestionType.Hash,
+            difficulty = QuestionDifficulty.EASY,
             link = "https://leetcode.cn/problems/two-sum/?envType=study-plan-v2&envId=top-100-liked"
     )
     public int[] twoSum(int[] nums, int target) {

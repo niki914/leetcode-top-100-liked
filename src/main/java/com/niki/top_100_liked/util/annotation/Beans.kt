@@ -1,12 +1,12 @@
 package com.niki.top_100_liked.util.annotation
 
-enum class Diff(val string: String) {
+enum class QuestionDifficulty(val string: String) {
     EASY("简单"),
     MEDIUM("中等"),
     HARD("困难")
 }
 
-enum class Type(val string: String) {
+enum class QuestionType(val string: String) {
     Hash("哈希"),
     Substring("子串"),
     TwoPointers("双指针"),
