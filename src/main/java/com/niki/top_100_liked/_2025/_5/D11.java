@@ -1,5 +1,6 @@
 package com.niki.top_100_liked._2025._5;
 
+import com.niki.top_100_liked.beans.ListNode;
 import com.niki.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki.top_100_liked.util.annotation.QuestionInfo;
 import com.niki.top_100_liked.util.annotation.QuestionType;
@@ -81,9 +82,11 @@ public class D11 {
         /*
          大致流程:
          head -> [1] -> [2] -> [3] -> null
-         null <- [1]    [2] -> [3] -> null
-         null <- [1] <- [2]    [3] -> null
-         null <- [1] <- [2] <- [3] <- head
+
+         head    [1] -> [2] -> [3] -> null
+         head <- [1]    [2] -> [3] -> null
+         head <- [1] <- [2]    [3] -> null
+         head <- [1] <- [2] <- [3] <- null
 
          每一个我们要反转其 next 指针的项就是 curr, 为了不丢失被断开的那些节点我们需要用 next 和 prev 来持有他们然后进行反转:
          prev    curr -> next
@@ -98,15 +101,5 @@ public class D11 {
         }
 
         return prev; // prev 是新链表的头节点
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
     }
 }
