@@ -4,7 +4,6 @@ import com.niki.top_100_liked.beans.ListNode;
 import com.niki.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki.top_100_liked.util.annotation.QuestionInfo;
 import com.niki.top_100_liked.util.annotation.QuestionType;
-import com.niki.top_100_liked.util.annotation.SuspendQuestion;
 
 public class D20 {
     @QuestionInfo(
@@ -42,25 +41,22 @@ public class D20 {
             difficulty = QuestionDifficulty.MEDIUM,
             link = "https://leetcode.cn/problems/add-two-numbers/description/?envType=study-plan-v2&envId=top-100-liked"
     )
-    @SuspendQuestion(
-            name = "两数相加",
-            reason = "lazy"
-    )
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(0); // 哑节点简化头节点处理
         ListNode curr = dummy;
-        int carry = 0; // 进位
+        int carry = 0; // 进位需要给链表的下一位: [5,6] + [5,7] -> [0,4]
 
         while (l1 != null || l2 != null || carry != 0) {
-            int x = (l1 != null) ? l1.val : 0; // 获取 l1 的值，无节点则为 0
-            int y = (l2 != null) ? l2.val : 0; // 获取 l2 的值，无节点则为 0
+            int x = (l1 != null) ? l1.val : 0;
+            int y = (l2 != null) ? l2.val : 0;
             int sum = x + y + carry; // 计算当前位和
 
             carry = sum / 10; // 更新进位
             curr.next = new ListNode(sum % 10); // 创建新节点存储当前位
-            curr = curr.next;
 
-            // 前移指针
+
+            // 后移指针
+            curr = curr.next;
             if (l1 != null) l1 = l1.next;
             if (l2 != null) l2 = l2.next;
         }
