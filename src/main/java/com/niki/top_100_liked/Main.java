@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         List<String> list1 = new QuestionFinder().find(
 //                info -> info.name().contains("移动") && "双指针".equals(info.type())
+//                info -> info.name().contains("合并")
                 info -> true
         );
 
