@@ -14,5 +14,5 @@ enum class QuestionType(val string: String) {
     Array("普通数组"),
     Matrix("矩阵"),
     LinkedList("链表"),
-    BinaryTree("二叉树")
+    Tree("二叉树")
 }
