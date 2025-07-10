@@ -14,5 +14,11 @@ enum class QuestionType(val string: String) {
     Array("普通数组"),
     Matrix("矩阵"),
     LinkedList("链表"),
-    Tree("二叉树")
+    Tree("二叉树"),
+    Graph("图论"),
+    Backtracking("回溯"),
+    BinarySearch("二分查找"),
+    Stack("栈"),
+    Heap("堆"),
+    DynamicProgramming("动态规划")
 }
