@@ -15,7 +15,7 @@ public class Main {
         );
 
         List<String> list2 = new SuspendQuestionFinder().find(
-//                info -> info.name().contains("移动")
+//                info -> info.name().contains("移动"g)
                 info -> true
         );
 
