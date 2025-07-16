@@ -6,8 +6,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 // 注解作用于类
+
+/**
+ * 可以通过注解反射并按条件查询算法题
+ */
 @Target({ElementType.METHOD, ElementType.TYPE})
-// 注解保留到运行时，以便反射读取
 @Retention(RetentionPolicy.RUNTIME)
 public @interface QuestionInfo {
     String name();
