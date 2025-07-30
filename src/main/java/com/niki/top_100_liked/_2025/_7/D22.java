@@ -59,11 +59,12 @@ public class D22 {
     public int findMin(int[] nums) {
         int left = 0, right = nums.length - 1;
 
+        // 总是收缩到极限，也就是左右重合的情况
         while (left < right) {
             int mid = left + (right - left) / 2;
             // 如果 mid 元素大于右端元素，说明最小值在右半部分
             if (nums[mid] > nums[right]) {
-                left = mid + 1;
+                left = mid + 1; // 在最后的夹逼过程中这个操作会直接让 left == right 导致退出循环
             } else {
                 // 否则，最小值在左半部分或 mid 本身
                 right = mid;
