@@ -14,7 +14,6 @@ public class D8 {
             difficulty = QuestionDifficulty.MEDIUM,
             link = "https://leetcode.cn/problems/decode-string/description/?envType=study-plan-v2&envId=top-100-liked"
     )
-    // TODO 真鸡巴窒息
     public String decodeString(String s) {
         /*
         3[a2[c]] -> accaccacc"
@@ -36,6 +35,25 @@ public class D8 {
                 num = 0;
                 currentStr = new StringBuilder();
             } else if (c == ']') {
+                /*
+                    在遇到第一个 ']' 开始，以 '3[a2[c]]' 为例，状态为：
+                    num = 0, currStr = "c", numStack = [3, 2], strStack = ["", "a"]
+                    ---
+                    repeat = 2
+                    prevStr = "a"
+                    repeated = "c" * 2
+
+                    currStr = "a" + "c" * 2
+                    ---
+                    repeat = 3
+                    prevStr = ""
+                    repeated = "acc" * 3
+
+                    currStr = "" + "acc" * 3
+                    ---
+                    得到: "accaccacc"
+                */
+
                 // 遇到 ']'，弹出数字和字符串，重复当前字符串并拼接
                 int repeat = numStack.pop();
                 StringBuilder prevStr = strStack.pop();
