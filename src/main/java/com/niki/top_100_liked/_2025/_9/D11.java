@@ -35,7 +35,7 @@ public class D11 {
         return minHeap.peek();
     }
 
-    private static class MinHeap {
+    static class MinHeap {
         private int[] heap; // 存储堆的数组
         private int size;  // 当前堆大小
         private int capacity; // 堆的最大容量
