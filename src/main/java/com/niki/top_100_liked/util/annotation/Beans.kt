@@ -14,6 +14,7 @@ enum class QuestionType(val string: String) {
     Array("普通数组"),
     Matrix("矩阵"),
     LinkedList("链表"),
+    Greedy("贪心算法"),
     Tree("二叉树"),
     Graph("图论"),
     Backtracking("回溯"),
