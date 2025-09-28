@@ -1,5 +1,27 @@
 package com.niki.top_100_liked
 
+sealed class EmailSchedule {
+    data class Daily(val hour: Int /* 0 ~ 24 */) : EmailSchedule()
+
+    data class Weekly(
+        val dayOfWeek: Int /* 1 ~ 7 */,
+        val hour: Int /* 0 ~ 24 */
+    ) : EmailSchedule()
+
+    data class Monthly(
+        val dayOfMonth: Int /* 1 ~ 31 */,
+        val hour: Int /* 0 ~ 24 */
+    ) : EmailSchedule()
+
+    data class Randomly(val seedForHours: Int /* 以小时为单位的种子 */) : EmailSchedule()
+
+    data class SpecificTime(
+        val dateMonth: Int, // 1 ~ 12
+        val dateDay: Int, // 1 ~ 31
+        val hour: Int // 0 ~ 24
+    ) : EmailSchedule()
+}
+
 interface MQ<T> {
     fun dequeue(): T
     fun enqueue(t: T)
@@ -9,7 +31,7 @@ interface MQRunner<T> {
     fun start()
     fun stop()
 
-    fun sendMessage(t:T)
+    fun sendMessage(t: T)
     fun setOnMessageListener(l: (T) -> Unit)
 }
 
@@ -38,7 +60,7 @@ class MQRunnerImpl(private val mq: MQ<Msg>) : MQRunner<Msg> {
     }
 }
 
-class Test {
+class TestKt {
 //    private class Node(val key: Int, val value: Int) {
 //        var pre: Node? = null
 //        var next: Node? = null
