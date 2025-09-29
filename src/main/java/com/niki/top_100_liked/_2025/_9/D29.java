@@ -3,6 +3,7 @@ package com.niki.top_100_liked._2025._9;
 import com.niki.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki.top_100_liked.util.annotation.QuestionInfo;
 import com.niki.top_100_liked.util.annotation.QuestionType;
+import com.niki.top_100_liked.util.annotation.SuspendQuestion;
 
 import java.util.Arrays;
 
@@ -80,5 +81,44 @@ class D29 {
         }
 
         return maxProduct;
+    }
+
+    @QuestionInfo(
+            name = "分割等和子集",
+            type = QuestionType.DynamicProgramming,
+            difficulty = QuestionDifficulty.MEDIUM,
+            link = "https://leetcode.cn/problems/partition-equal-subset-sum/description/"
+    )
+    @SuspendQuestion(
+            name = "分割等和子集",
+            reason = "难"
+    )
+    public boolean canPartition(int[] nums) {
+        int sum = 0;
+        for (int num : nums) {
+            sum += num; // 计算数组总和
+        }
+
+        // 如果总和为奇数，无法分割成两个相等子集
+        if (sum % 2 != 0) {
+            return false;
+        }
+
+        int target = sum / 2; // 目标是找到和为sum/2的子集
+        boolean[] dp = new boolean[target + 1];
+        dp[0] = true; // 和为0总是可行的（空子集）
+
+        // 遍历每个数字
+        for (int num : nums) {
+            // 从大到小遍历，避免覆盖已更新的状态
+            for (int i = target; i >= num; i--) {
+                // i = target downTo num
+                if (dp[i - num]) {
+                    dp[i] = true;
+                }
+            }
+        }
+
+        return dp[target]; // 返回是否能达到目标和
     }
 }
