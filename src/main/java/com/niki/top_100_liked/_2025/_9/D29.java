@@ -87,7 +87,7 @@ class D29 {
             name = "分割等和子集",
             type = QuestionType.DynamicProgramming,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/partition-equal-subset-sum/description/"
+            link = "https://leetcode.cn/problems/partition-equal-subset-sum/?envType=study-plan-v2&envId=top-100-liked"
     )
     @SuspendQuestion(
             name = "分割等和子集",
@@ -107,6 +107,11 @@ class D29 {
         int target = sum / 2; // 目标是找到和为sum/2的子集
         boolean[] dp = new boolean[target + 1];
         dp[0] = true; // 和为0总是可行的（空子集）
+
+        /*
+            当前可以转化题目为计算总和的半数，并尝试找到一个子数组的和为此半数，如果可以就说明可以返回真
+            但是下面这个 dp 循环看不懂
+         */
 
         // 遍历每个数字
         for (int num : nums) {
