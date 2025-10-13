@@ -10,7 +10,7 @@ public class D10 {
             name = "不同路径",
             type = QuestionType.DynamicProgramming,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/unique-paths/description/"
+            link = "https://leetcode.cn/problems/unique-paths/description/?envType=study-plan-v2&envId=top-100-liked"
     )
     public int uniquePaths(int m, int n) {
         // 初始化 dp 数组，第一行和第一列均为 1
@@ -38,7 +38,7 @@ public class D10 {
             name = "最小路径和",
             type = QuestionType.DynamicProgramming,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/minimum-path-sum/description/"
+            link = "https://leetcode.cn/problems/minimum-path-sum/description/?envType=study-plan-v2&envId=top-100-liked"
     )
     public int minPathSum(int[][] grid) {
         if (grid == null || grid.length == 0) return 0;
