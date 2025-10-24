@@ -1,0 +1,25 @@
+package com.niki914.top_100_liked.util.annotation
+
+enum class QuestionDifficulty(val string: String) {
+    EASY("简单"),
+    MEDIUM("中等"),
+    HARD("困难")
+}
+
+enum class QuestionType(val string: String) {
+    Hash("哈希"),
+    Substring("子串"),
+    TwoPointers("双指针"),
+    SlidingWindow("滑动窗口"),
+    Array("普通数组"),
+    Matrix("矩阵"),
+    LinkedList("链表"),
+    Greedy("贪心算法"),
+    Tree("二叉树"),
+    Graph("图论"),
+    Backtracking("回溯"),
+    BinarySearch("二分查找"),
+    Stack("栈"),
+    Heap("堆"),
+    DynamicProgramming("动态规划")
+}
