@@ -3,7 +3,6 @@ package com.niki914.top_100_liked._2025._10;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
-import com.niki914.top_100_liked.util.annotation.SuspendQuestion;
 
 public class D25 {
 

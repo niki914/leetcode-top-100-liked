@@ -21,5 +21,6 @@ enum class QuestionType(val string: String) {
     BinarySearch("二分查找"),
     Stack("栈"),
     Heap("堆"),
-    DynamicProgramming("动态规划")
+    DynamicProgramming("动态规划"),
+    Skill("技巧")
 }
