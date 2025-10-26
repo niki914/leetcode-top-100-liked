@@ -43,10 +43,10 @@ public class D25 {
                     //    car -> cat: car -> cat(替换)
                     dp[i][j] = Math.min(
                             Math.min(
-                                    dp[i][j - 1], // 插入: send -> candy, 只需要退化问题, 在 send -> cand 的基础 ( 2 步 ) 上加 1 步 (插入)
-                                    dp[i - 1][j] // 删除: cart -> car, 只需要退化问题, 在 car -> car 的基础 ( 0 步 ) 上加 1 步 (删除)
+                                    dp[i][j - 1], // 插入: send -> candy, 只需要退化问题, 在 computeStepsOf('send -> cand') 的基础 ( 2 步 ) 上加 1 步 (插入)
+                                    dp[i - 1][j] // 删除: cart -> car, 只需要退化问题, 在 computeStepsOf('car -> car') 的基础 ( 0 步 ) 上加 1 步 (删除)
                             ),
-                            dp[i - 1][j - 1] // 替换: bar -> cat, 只需要退化问题, 在 ba -> ca 的基础 ( 1 步 ) 上加 1 步 (替换)
+                            dp[i - 1][j - 1] // 替换: bar -> cat, 只需要退化问题, 在 computeStepsOf('ba -> ca') 的基础 ( 1 步 ) 上加 1 步 (替换)
                     ) + 1;
                 }
             }
