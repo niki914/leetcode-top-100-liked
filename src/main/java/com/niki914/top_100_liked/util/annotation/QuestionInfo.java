@@ -20,4 +20,6 @@ public @interface QuestionInfo {
     QuestionDifficulty difficulty();
 
     String link();
+
+    int number() default -1;
 }

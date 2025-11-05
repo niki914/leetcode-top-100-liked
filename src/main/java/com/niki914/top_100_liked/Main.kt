@@ -1,27 +1,23 @@
-package com.niki914.top_100_liked;
+package com.niki914.top_100_liked
 
-import com.niki914.top_100_liked.util.finder.QuestionFinder;
-import com.niki914.top_100_liked.util.finder.SuspendQuestionFinder;
 
-import java.util.List;
+fun main() {
+    val query = QuestionQuery()
+    val suspendQuery = SuspendQuery()
 
-public class Main {
+    val queryList = query.getAll()
+//    val queryList = query.findByKeywords("数")
 
-    public static void main(String[] args) throws Exception {
-        List<String> list1 = new QuestionFinder().find(
-//                info -> info.name().contains("移动") && "双指针".equals(info.type())
-//                info -> info.name().contains("合并")
-                info -> true
-        );
+    val suspendList = suspendQuery.getAll()
+//    val suspendList = suspendQuery.findByKeywords("难")
 
-        List<String> list2 = new SuspendQuestionFinder().find(
-//                info -> info.name().contains("移动"g)
-                info -> true
-        );
-
-        list1.forEach(System.out::println);
-        System.out.println("已记录: 共 " + list1.size() + " 题");
-        list2.forEach(System.out::println);
-        System.out.println("未完成: 共 " + list2.size() + " 题");
+    queryList.forEach {
+        println(it)
     }
+    println("已记录: 共 " + queryList.size + " 题")
+
+    suspendList.forEach {
+        println(it)
+    }
+    println("未完成: 共 " + suspendList.size + " 题")
 }
