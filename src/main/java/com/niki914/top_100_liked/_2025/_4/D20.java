@@ -16,20 +16,25 @@ public class D20 {
             name = "两数之和",
             type = QuestionType.Hash,
             difficulty = QuestionDifficulty.EASY,
-            link = "https://leetcode.cn/problems/two-sum/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/two-sum/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 1
     )
     public int[] twoSum(int[] nums, int target) {
         if (nums == null || nums.length < 2)
             return new int[]{};
 
         Map<Integer, Integer> map = new HashMap<>();
+        // map: <value, index>
 
         for (int i = 0; i < nums.length; i++) {
             int num = nums[i];
             int com = target - num;
 
-            if (map.containsKey(com))
+            if (map.containsKey(com)) {
+                // if target value is cached
+                // then {i} and the cached index are the answers
                 return new int[]{i, map.get(com)};
+            }
 
             map.put(num, i);
         }
