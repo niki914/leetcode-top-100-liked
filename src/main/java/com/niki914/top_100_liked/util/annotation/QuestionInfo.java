@@ -21,5 +21,5 @@ public @interface QuestionInfo {
 
     String link();
 
-    int number() default -1;
+    int numberInType() default -1;
 }

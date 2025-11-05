@@ -18,7 +18,7 @@ class QuestionQuery {
                 it.link
             )
 
-            val num = it.number
+            val num = it.numberInType
             if (num != -1) {
                 set.add(num.toString())
             }
@@ -31,7 +31,7 @@ class QuestionQuery {
     }
 
     fun findByNum(num: Int) = finder.find {
-        it.number != -1 && it.number == num
+        it.numberInType != -1 && it.numberInType == num
     }
 
     fun findByType(type: QuestionType) = finder.find {
