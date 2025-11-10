@@ -12,7 +12,8 @@ public class D25 {
             name = "接雨水",
             type = QuestionType.TwoPointers,
             difficulty = QuestionDifficulty.HARD,
-            link = "https://leetcode.cn/problems/trapping-rain-water/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/trapping-rain-water/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 4
     )
     public int trap(int[] height) {
         if (height.length == 0) return 0;
@@ -45,8 +46,13 @@ public class D25 {
             int rightHeight = height[right];
 
             // 更新最高的边界
-            if (leftHeight > leftMax) leftMax = leftHeight;
-            if (rightHeight > rightMax) rightMax = rightHeight;
+            if (leftHeight > leftMax) {
+                leftMax = leftHeight;
+            }
+
+            if (rightHeight > rightMax) {
+                rightMax = rightHeight;
+            }
 
             // 左右边界不等的情况下应该处理更短的一方
             // 计算该列的接水量并移动指针
@@ -66,7 +72,8 @@ public class D25 {
             name = "无重复字符的最长子串",
             type = QuestionType.SlidingWindow,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 1
     )
     public int lengthOfLongestSubstring(String s) {
         if (s == null || s.isEmpty()) return 0;

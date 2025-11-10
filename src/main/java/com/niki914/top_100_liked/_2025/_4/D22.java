@@ -1,5 +1,7 @@
 package com.niki914.top_100_liked._2025._4;
 
+import static java.lang.Math.min;
+
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
@@ -8,16 +10,45 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static java.lang.Math.min;
-
 public class D22 {
     @QuestionInfo(
             name = "乘最多水的容器",
             type = QuestionType.TwoPointers,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/container-with-most-water/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/container-with-most-water/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 2
     )
     public int maxArea(int[] heights) {
+
+        /*
+        2025.11.10 review 解出
+        public int maxArea(int[] height){
+            int l = 0, r = height.length - 1;
+            int max = 0;
+            while (l < r) {
+                int width = r - l;
+                int min, minHeight;
+
+                if (height[r] > height[l]) {
+                    min = l;
+                    l++;
+                } else {
+                    min = r;
+                    r--;
+                }
+
+                minHeight = height[min];
+
+                int v = width * minHeight;
+
+                if (v > max) {
+                    max = v;
+                }
+            }
+            return max;
+        }
+         */
+
         int leftP = 0;
         int rightP = heights.length - 1;
 
@@ -47,7 +78,8 @@ public class D22 {
             name = "三数之和",
             type = QuestionType.TwoPointers,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/3sum/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/3sum/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 3
     )
     public List<List<Integer>> threeSum(int[] nums) {
         int size = nums.length;
