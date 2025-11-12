@@ -2,7 +2,6 @@ package com.niki914.top_100_liked._2025._4;
 
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
-import com.niki914.top_100_liked.util.annotation.SuspendQuestion;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
 public class D29 {
@@ -10,11 +9,8 @@ public class D29 {
             name = "最小覆盖子串",
             type = QuestionType.Substring,
             difficulty = QuestionDifficulty.HARD,
-            link = "https://leetcode.cn/problems/minimum-window-substring/description/?envType=study-plan-v2&envId=top-100-liked"
-    )
-    @SuspendQuestion(
-            name = "最小覆盖子串",
-            reason = "while 循环以内看不懂"
+            link = "https://leetcode.cn/problems/minimum-window-substring/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 3
     )
     public String minWindow(String s, String t) {
         if (s == null || t == null || s.length() < t.length()) {

@@ -4,7 +4,11 @@ import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class D27 {
 
@@ -12,9 +16,64 @@ public class D27 {
             name = "找到字符串中所有字母异位词",
             type = QuestionType.SlidingWindow,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/find-all-anagrams-in-a-string/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/find-all-anagrams-in-a-string/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 2
     )
     public List<Integer> findAnagrams(String s, String p) {
+
+        /*
+
+    25.11.11 解得 使用哈希值解法 未使用滑动窗口
+
+    int hash(String s) {
+        char[] chars = s.toCharArray();
+
+        int[] arr = new int[26];
+
+        for (char c: chars) {
+            arr[c - 'a']++;
+        }
+
+        int hash = 0;
+
+        for (int count: arr) {
+            hash = hash * 31 + count;
+        }
+
+        return hash;
+    }
+
+    public List<Integer> findAnagrams(String s, String p) {
+        Set<Integer> set = new HashSet<>();
+
+        Map<String, Integer> cache = new HashMap<>();
+
+        int len = p.length();
+        int pHash = hash(p);
+
+        cache.put(p, pHash);
+
+        for(int i = 0; i <= s.length() - len; i++) {
+            String subStr = s.substring(i, i + len);
+
+            int subHash;
+
+            if(cache.containsKey(subStr)){
+                subHash = cache.get(subStr);
+            } else {
+                subHash = hash(subStr);
+                cache.put(subStr, subHash);
+            }
+
+            if(subHash == pHash) {
+                set.add(i);
+            }
+        }
+
+        return new ArrayList<Integer>(set);
+    }
+         */
+
         List<Integer> startIndices = new ArrayList<>();
 
         if (s.length() < p.length()) {
@@ -59,7 +118,8 @@ public class D27 {
             name = "和为 K 的子数组",
             type = QuestionType.Substring,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/subarray-sum-equals-k/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/subarray-sum-equals-k/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 1
     )
     public int subarraySum(int[] nums, int k) {
         int prefixSum = 0; // 前缀和
@@ -73,14 +133,18 @@ public class D27 {
             prefixSum += num;
 
             // 目标差值: 如果存在这个数, 说明某两个前缀和的差值为 k
-            // 也就是说出现了我们要的子串组
+            // 也就是说在 [0..$currIndex] 中出现了我们要的子串组
+            // 此处不会重复添加的原因是，前面不直接添加，而是缓存，等后面检查到的时候再添加
             int targetDiff = prefixSum - k;
             if (prefixSumCount.containsKey(targetDiff)) {
                 // 在这个情况下, 我们就可以累加这些子数组数量
                 subarrayCount += prefixSumCount.get(targetDiff);
             }
 
-            int count = prefixSumCount.getOrDefault(prefixSum, 0) + 1;
+            int count = prefixSumCount.getOrDefault(
+                    /* 这里容易写错 */prefixSum,
+                    0
+            ) + 1;
             prefixSumCount.put(prefixSum, count);
         }
 

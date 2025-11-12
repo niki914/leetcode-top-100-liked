@@ -14,7 +14,8 @@ public class D7 {
             name = "最大子数组和",
             type = QuestionType.Array,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/maximum-subarray/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/maximum-subarray/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 1
     )
     public int maxSubArray(int[] nums) {
         // 感觉巧妙地避开了许多问题
@@ -40,7 +41,8 @@ public class D7 {
             name = "合并区间",
             type = QuestionType.Array,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/merge-intervals/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/merge-intervals/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 2
     )
     public int[][] merge(int[][] intervals) {
         // 按起始时间(子数组的首元素)排序
@@ -75,7 +77,8 @@ public class D7 {
             name = "轮转数组",
             type = QuestionType.Array,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/rotate-array/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/rotate-array/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 3
     )
     public static class Rotate {
         public void rotate(int[] nums, int k) {

@@ -10,7 +10,8 @@ public class D9 {
             name = "除自身以外数组的乘积",
             type = QuestionType.Array,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/product-of-array-except-self/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/product-of-array-except-self/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 4
     )
     public int[] productExceptSelf(int[] nums) {
         int n = nums.length;
@@ -40,9 +41,41 @@ public class D9 {
             name = "缺失的第一个正数",
             type = QuestionType.Array,
             difficulty = QuestionDifficulty.HARD,
-            link = "https://leetcode.cn/problems/first-missing-positive/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/first-missing-positive/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 5
     )
     public int firstMissingPositive(int[] nums) {
+        /*
+        2025.11.12 凑合解法
+        class Solution {
+    public int firstMissingPositive(int[] nums) {
+        boolean containsOne = false;
+
+        Set<Integer> set = new HashSet<>();
+
+        for(int num: nums) {
+            if(num > 0) {
+                set.add(num);
+                if (num == 1) {
+                    containsOne = true;
+                }
+            }
+        }
+
+        if(!containsOne) {
+            return 1;
+        }
+
+        int next = 2;
+
+        while(set.contains(next)) {
+            next++;
+        }
+
+        return next;
+    }
+}
+         */
         int n = nums.length;
 
         // 第一步: 将所有非正数和大于 n 的数替换为 1
@@ -72,7 +105,7 @@ public class D9 {
             }
         }
 
-        // 第二部之后, 数组元素的值的正负表示索引所表示的数是否存在
+        // 第二步之后, 数组元素的值的正负表示索引所表示的数是否存在
         // 比如: i = 3, nums[3] < 0 说明数字`4`被标记了, 是出现了的
         // 第三步: 找到第一个正数值的索引
         for (int i = 0; i < n; i++) {
@@ -89,7 +122,8 @@ public class D9 {
             name = "矩阵置零",
             type = QuestionType.Matrix,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/set-matrix-zeroes/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/set-matrix-zeroes/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 1
     )
     public void setZeroes(int[][] matrix) {
         // 看起来有点抽象, 画个图好理解一点

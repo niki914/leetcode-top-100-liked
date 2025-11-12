@@ -13,7 +13,8 @@ public class D10 {
             name = "螺旋矩阵",
             type = QuestionType.Matrix,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/spiral-matrix/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/spiral-matrix/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 2
     )
     public List<Integer> spiralOrder(int[][] matrix) {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
@@ -63,7 +64,8 @@ public class D10 {
             name = "旋转图像",
             type = QuestionType.Matrix,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/rotate-image/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/rotate-image/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 3
     )
     public void rotate(int[][] matrix) {
         // 拿张纸试一下就知道了, 按算法两步后刚好旋转了 90 度
