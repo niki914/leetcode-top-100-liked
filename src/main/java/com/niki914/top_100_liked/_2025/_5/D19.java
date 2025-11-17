@@ -10,7 +10,8 @@ public class D19 {
             name = "回文链表",
             type = QuestionType.LinkedList,
             difficulty = QuestionDifficulty.EASY,
-            link = "https://leetcode.cn/problems/palindrome-linked-list/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/palindrome-linked-list/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 3
     )
     public boolean isPalindrome(ListNode head) {
         if (head == null || head.next == null) {

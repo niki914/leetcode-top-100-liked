@@ -11,7 +11,8 @@ public class D11 {
             name = "搜索二维矩阵 II",
             type = QuestionType.Matrix,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/search-a-2d-matrix-ii/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/search-a-2d-matrix-ii/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 4
     )
     public boolean searchMatrix(int[][] matrix, int target) {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
@@ -46,7 +47,8 @@ public class D11 {
             name = "相交链表",
             type = QuestionType.LinkedList,
             difficulty = QuestionDifficulty.EASY,
-            link = "https://leetcode.cn/problems/intersection-of-two-linked-lists/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/intersection-of-two-linked-lists/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 1
     )
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) {
@@ -72,7 +74,8 @@ public class D11 {
             name = "反转链表",
             type = QuestionType.LinkedList,
             difficulty = QuestionDifficulty.EASY,
-            link = "https://leetcode.cn/problems/reverse-linked-list/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/reverse-linked-list/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 2
     )
     public ListNode reverseList(ListNode head) {
         // https://www.bilibili.com/video/BV1Lg411K7py?spm_id_from=333.788.recommend_more_video.2&vd_source=d1bc8ca6314de4d362247f172f7d13ca
@@ -89,8 +92,12 @@ public class D11 {
          head <- [1] <- [2] <- [3] <- null
 
          每一个我们要反转其 next 指针的项就是 curr, 为了不丢失被断开的那些节点我们需要用 next 和 prev 来持有他们然后进行反转:
-         prev    curr -> next
-         prev <- curr    next
+         prev    curr -> next -> @a01
+         prev <- curr    next -> @a01
+         @a00 <- prev    curr -> @a01
+         @a00 <- prev <- curr    next
+         ...
+
          在反转完成后我们移动 prev 和 curr 来处理后面的节点
          */
         while (curr != null) {
