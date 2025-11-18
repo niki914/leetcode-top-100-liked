@@ -1,6 +1,8 @@
 package com.niki914.top_100_liked._2025._5;
 
+import com.niki914.top_100_liked.Day;
 import com.niki914.top_100_liked.beans.TreeNode;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
@@ -10,7 +12,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class D28 {
+@Link(
+        last = D26.class,
+        next = D29.class
+)
+public class D28 implements Day {
 
     @QuestionInfo(
             name = "二叉树的直径",
@@ -92,7 +98,8 @@ public class D28 {
             name = "将有序数组转换为二叉搜索树",
             type = QuestionType.Tree,
             difficulty = QuestionDifficulty.EASY,
-            link = "https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 7
     )
     public TreeNode sortedArrayToBST(int[] nums) {
         if (nums == null || nums.length == 0) {

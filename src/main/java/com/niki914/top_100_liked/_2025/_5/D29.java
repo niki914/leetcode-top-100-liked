@@ -1,6 +1,9 @@
 package com.niki914.top_100_liked._2025._5;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked._2025._6.D3;
 import com.niki914.top_100_liked.beans.TreeNode;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
@@ -11,12 +14,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class D29 {
+@Link(
+        last = D28.class,
+        next = D3.class
+)
+public class D29 implements Day {
+
     @QuestionInfo(
             name = "验证二叉搜索树",
             type = QuestionType.Tree,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/validate-binary-search-tree/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/validate-binary-search-tree/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 8
     )
     public boolean isValidBST(TreeNode root) {
         return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
@@ -37,7 +46,8 @@ public class D29 {
             name = "二叉搜索树中第K小的元素",
             type = QuestionType.Tree,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/kth-smallest-element-in-a-bst/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/kth-smallest-element-in-a-bst/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 9
     )
     public static class KthSmallest {
         private int count = 0; // 记录当前遍历的节点序号
@@ -74,7 +84,8 @@ public class D29 {
             name = "二叉树的右视图",
             type = QuestionType.Tree,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/binary-tree-right-side-view/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/binary-tree-right-side-view/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 10
     )
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> result = new ArrayList<>();
@@ -99,7 +110,8 @@ public class D29 {
             name = "二叉树展开为链表",
             type = QuestionType.Tree,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 11
     )
     public void flatten(TreeNode root) {
         if (root == null) return;
@@ -128,7 +140,8 @@ public class D29 {
             name = "从前序与中序遍历序列构造二叉树",
             type = QuestionType.Tree,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 12
     )
     @SuspendQuestion(
             name = "从前序与中序遍历序列构造二叉树",

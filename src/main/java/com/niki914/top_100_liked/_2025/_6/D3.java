@@ -1,6 +1,10 @@
 package com.niki914.top_100_liked._2025._6;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked._2025._5.D29;
+import com.niki914.top_100_liked._2025._7.D10;
 import com.niki914.top_100_liked.beans.TreeNode;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
@@ -8,13 +12,18 @@ import com.niki914.top_100_liked.util.annotation.QuestionType;
 import java.util.HashMap;
 import java.util.Map;
 
-public class D3 {
+@Link(
+        last = D29.class,
+        next = D10.class
+)
+public class D3 implements Day {
 
     @QuestionInfo(
             name = "路径总和 III",
             type = QuestionType.Tree,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/path-sum-iii/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/path-sum-iii/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 13
     )
     public int pathSum(TreeNode root, int targetSum) {
         // 哈希表记录前缀和及其出现次数
