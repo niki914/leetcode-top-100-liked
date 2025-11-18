@@ -1,11 +1,10 @@
 package com.niki914.top_100_liked._2025._4;
 
 import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,13 +13,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class D21 extends Day {
-
-    @Override
-    @NotNull
-    public Day getNext() {
-        return new D22();
-    }
+@Link(
+        last = D20.class,
+        next = D22.class
+)
+public class D21 implements Day {
 
     @QuestionInfo(
             name = "字母异位词分组",

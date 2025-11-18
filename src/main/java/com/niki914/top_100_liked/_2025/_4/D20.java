@@ -1,22 +1,19 @@
 package com.niki914.top_100_liked._2025._4;
 
 import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.HashMap;
 import java.util.Map;
 
-public class D20 extends Day {
-
-    @Override
-    @NotNull
-    public Day getNext() {
-        return new D21();
-    }
+@Link(
+        last = Day.class,
+        next = D21.class
+)
+public class D20 implements Day {
 
     /**
      * 从前面的数中找是否存在目标差值，map 的记录方式保证了返回的索引不同

@@ -1,11 +1,10 @@
 package com.niki914.top_100_liked._2025._4;
 
 import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,13 +12,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class D27 extends Day {
-
-    @Override
-    @NotNull
-    public Day getNext() {
-        return new D28();
-    }
+@Link(
+        last = D25.class,
+        next = D28.class
+)
+public class D27 implements Day {
 
     @QuestionInfo(
             name = "找到字符串中所有字母异位词",

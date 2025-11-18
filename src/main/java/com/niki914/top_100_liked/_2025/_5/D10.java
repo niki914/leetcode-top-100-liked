@@ -1,22 +1,19 @@
 package com.niki914.top_100_liked._2025._5;
 
 import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class D10 extends Day {
-
-    @Override
-    @NotNull
-    public Day getNext() {
-        return new D11();
-    }
+@Link(
+        last = D9.class,
+        next = D11.class
+)
+public class D10 implements Day {
 
     @QuestionInfo(
             name = "螺旋矩阵",

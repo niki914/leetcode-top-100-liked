@@ -2,25 +2,24 @@ package com.niki914.top_100_liked._2025._5;
 
 import com.niki914.top_100_liked.Day;
 import com.niki914.top_100_liked.beans.ListNode;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
+import com.niki914.top_100_liked.util.annotation.SuspendQuestion;
 
-import org.jetbrains.annotations.NotNull;
-
-public class D21 extends Day {
-
-    @Override
-    @NotNull
-    public Day getNext() {
-        return new D24();
-    }
+@Link(
+        last = D20.class,
+        next = D24.class
+)
+public class D21 implements Day {
 
     @QuestionInfo(
             name = "删除链表的倒数第 N 个结点",
             type = QuestionType.LinkedList,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 8
     )
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy = new ListNode(0); // 哑节点简化边界处理
@@ -50,7 +49,8 @@ public class D21 extends Day {
             name = "两两交换链表中的节点",
             type = QuestionType.LinkedList,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/swap-nodes-in-pairs/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/swap-nodes-in-pairs/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 9
     )
     public ListNode swapPairs(ListNode head) {
         // 空链表或单节点(没得换), 直接返回
@@ -87,7 +87,12 @@ public class D21 extends Day {
             name = "K 个一组翻转链表",
             type = QuestionType.LinkedList,
             difficulty = QuestionDifficulty.HARD,
-            link = "https://leetcode.cn/problems/reverse-nodes-in-k-group/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/reverse-nodes-in-k-group/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 10
+    )
+    @SuspendQuestion(
+            name = "K 个一组翻转链表",
+            reason = "为求效率掠过困难题"
     )
     public ListNode reverseKGroup(ListNode head, int k) {
         /*

@@ -2,25 +2,23 @@ package com.niki914.top_100_liked._2025._5;
 
 import com.niki914.top_100_liked.Day;
 import com.niki914.top_100_liked.beans.ListNode;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
-import org.jetbrains.annotations.NotNull;
-
-public class D20 extends Day {
-
-    @Override
-    @NotNull
-    public Day getNext() {
-        return new D21();
-    }
+@Link(
+        last = D19.class,
+        next = D21.class
+)
+public class D20 implements Day {
 
     @QuestionInfo(
             name = "合并两个有序链表",
             type = QuestionType.LinkedList,
             difficulty = QuestionDifficulty.EASY,
-            link = "https://leetcode.cn/problems/merge-two-sorted-lists/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/merge-two-sorted-lists/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 6
     )
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode l = new ListNode(0); // 哑节点简化合并(方便操作头节点)
@@ -49,7 +47,8 @@ public class D20 extends Day {
             name = "两数相加",
             type = QuestionType.LinkedList,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/add-two-numbers/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/add-two-numbers/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 7
     )
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(0); // 哑节点简化头节点处理

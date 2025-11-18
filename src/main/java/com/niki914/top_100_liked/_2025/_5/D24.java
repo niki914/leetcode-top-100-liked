@@ -3,25 +3,23 @@ package com.niki914.top_100_liked._2025._5;
 import com.niki914.top_100_liked.Day;
 import com.niki914.top_100_liked.beans.ListNode;
 import com.niki914.top_100_liked.beans.Node;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
-import org.jetbrains.annotations.NotNull;
-
-public class D24 extends Day {
-
-    @Override
-    @NotNull
-    public Day getNext() {
-        return null;
-    }
+@Link(
+        last = D21.class,
+        next = D26.class
+)
+public class D24 implements Day {
 
     @QuestionInfo(
             name = "随机链表的复制",
             type = QuestionType.LinkedList,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/copy-list-with-random-pointer/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/copy-list-with-random-pointer/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 11
     )
     public Node copyRandomList(Node head) {
         if (head == null) return null;

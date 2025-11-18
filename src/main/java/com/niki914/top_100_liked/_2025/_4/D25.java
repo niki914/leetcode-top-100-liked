@@ -1,22 +1,19 @@
 package com.niki914.top_100_liked._2025._4;
 
 import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.HashMap;
 import java.util.Map;
 
-public class D25 extends Day {
-
-    @Override
-    @NotNull
-    public Day getNext() {
-        return new D27();
-    }
+@Link(
+        last = D22.class,
+        next = D27.class
+)
+public class D25 implements Day {
 
     @QuestionInfo(
             name = "接雨水",

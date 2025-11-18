@@ -2,19 +2,16 @@ package com.niki914.top_100_liked._2025._5;
 
 import com.niki914.top_100_liked.Day;
 import com.niki914.top_100_liked.beans.ListNode;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
-import org.jetbrains.annotations.NotNull;
-
-public class D19 extends Day {
-
-    @Override
-    @NotNull
-    public Day getNext() {
-        return new D20();
-    }
+@Link(
+        last = D11.class,
+        next = D20.class
+)
+public class D19 implements Day {
 
     @QuestionInfo(
             name = "回文链表",
@@ -62,7 +59,8 @@ public class D19 extends Day {
             name = "环形链表",
             type = QuestionType.LinkedList,
             difficulty = QuestionDifficulty.EASY,
-            link = "https://leetcode.cn/problems/linked-list-cycle/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/linked-list-cycle/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 4
     )
     public boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) {
@@ -91,7 +89,8 @@ public class D19 extends Day {
             name = "环形链表 II",
             type = QuestionType.LinkedList,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/linked-list-cycle-ii/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/linked-list-cycle-ii/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 5
     )
     public ListNode detectCycle(ListNode head) {
         if (head == null || head.next == null) {
