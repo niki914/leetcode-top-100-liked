@@ -1,11 +1,20 @@
 package com.niki914.top_100_liked._2025._5;
 
+import com.niki914.top_100_liked.Day;
 import com.niki914.top_100_liked.beans.ListNode;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
-public class D11 {
+import org.jetbrains.annotations.NotNull;
+
+public class D11 extends Day {
+
+    @Override
+    @NotNull
+    public Day getNext() {
+        return new D19();
+    }
 
     @QuestionInfo(
             name = "搜索二维矩阵 II",

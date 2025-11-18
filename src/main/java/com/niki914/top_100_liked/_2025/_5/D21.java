@@ -1,11 +1,20 @@
 package com.niki914.top_100_liked._2025._5;
 
+import com.niki914.top_100_liked.Day;
 import com.niki914.top_100_liked.beans.ListNode;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
-public class D21 {
+import org.jetbrains.annotations.NotNull;
+
+public class D21 extends Day {
+
+    @Override
+    @NotNull
+    public Day getNext() {
+        return new D24();
+    }
 
     @QuestionInfo(
             name = "删除链表的倒数第 N 个结点",
@@ -93,7 +102,7 @@ public class D21 {
         4. 因此, head 要接上 rest, 也就是递归后的头节点
         5. 最后返回头部, 也就是 prev
          */
-        
+
         // 1. 数数是否足够 k 个节点
         ListNode curr = head;
         int count = 0;

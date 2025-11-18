@@ -1,13 +1,23 @@
 package com.niki914.top_100_liked._2025._4;
 
+import com.niki914.top_100_liked.Day;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class D28 {
+public class D28 extends Day {
+
+    @Override
+    @NotNull
+    public Day getNext() {
+        return new D29();
+    }
+
     @QuestionInfo(
             name = "滑动窗口最大值",
             type = QuestionType.Substring,

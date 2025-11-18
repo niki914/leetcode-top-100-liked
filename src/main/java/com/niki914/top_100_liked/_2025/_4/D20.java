@@ -1,13 +1,23 @@
 package com.niki914.top_100_liked._2025._4;
 
+import com.niki914.top_100_liked.Day;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class D20 {
+public class D20 extends Day {
+
+    @Override
+    @NotNull
+    public Day getNext() {
+        return new D21();
+    }
+
     /**
      * 从前面的数中找是否存在目标差值，map 的记录方式保证了返回的索引不同
      * 如果在一开始就全部记入 map，可能要先删除自身再进行查找，浪费资源

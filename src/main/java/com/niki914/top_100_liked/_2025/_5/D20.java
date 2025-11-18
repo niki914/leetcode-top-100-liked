@@ -1,11 +1,21 @@
 package com.niki914.top_100_liked._2025._5;
 
+import com.niki914.top_100_liked.Day;
 import com.niki914.top_100_liked.beans.ListNode;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
-public class D20 {
+import org.jetbrains.annotations.NotNull;
+
+public class D20 extends Day {
+
+    @Override
+    @NotNull
+    public Day getNext() {
+        return new D21();
+    }
+
     @QuestionInfo(
             name = "合并两个有序链表",
             type = QuestionType.LinkedList,
