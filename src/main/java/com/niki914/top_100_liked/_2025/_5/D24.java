@@ -7,6 +7,7 @@ import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
+import com.niki914.top_100_liked.util.annotation.SuspendQuestion;
 
 @Link(
         last = D21.class,
@@ -64,7 +65,8 @@ public class D24 implements Day {
             name = "排序链表",
             type = QuestionType.LinkedList,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/sort-list/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/sort-list/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 12
     )
     public ListNode sortList(ListNode head) {
         /*
@@ -104,7 +106,12 @@ public class D24 implements Day {
             name = "合并K个升序链表",
             type = QuestionType.LinkedList,
             difficulty = QuestionDifficulty.HARD,
-            link = "https://leetcode.cn/problems/merge-k-sorted-lists/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/merge-k-sorted-lists/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 13
+    )
+    @SuspendQuestion(
+            name = "合并K个升序链表",
+            reason = "为求效率掠过困难题"
     )
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists == null || lists.length == 0) {

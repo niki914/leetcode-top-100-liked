@@ -16,7 +16,8 @@ public class D28 {
             name = "二叉树的直径",
             type = QuestionType.Tree,
             difficulty = QuestionDifficulty.EASY,
-            link = "https://leetcode.cn/problems/diameter-of-binary-tree/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/diameter-of-binary-tree/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 5
     )
     public static class DiameterOfBinaryTree {
         // 全局变量记录最大直径
@@ -47,7 +48,8 @@ public class D28 {
             name = "二叉树的层序遍历",
             type = QuestionType.Tree,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/binary-tree-level-order-traversal/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/binary-tree-level-order-traversal/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 6
     )
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
