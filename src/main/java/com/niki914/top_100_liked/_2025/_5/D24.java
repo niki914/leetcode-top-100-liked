@@ -103,7 +103,7 @@ public class D24 implements Day {
     }
 
     @QuestionInfo(
-            name = "合并K个升序链表",
+            name = "合并 K 个升序链表",
             type = QuestionType.LinkedList,
             difficulty = QuestionDifficulty.HARD,
             link = "https://leetcode.cn/problems/merge-k-sorted-lists/description/?envType=study-plan-v2&envId=top-100-liked",

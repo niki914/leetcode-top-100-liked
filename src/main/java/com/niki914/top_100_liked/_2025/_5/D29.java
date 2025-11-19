@@ -43,7 +43,7 @@ public class D29 implements Day {
     }
 
     @QuestionInfo(
-            name = "二叉搜索树中第K小的元素",
+            name = "二叉搜索树中第 K 小的元素",
             type = QuestionType.Tree,
             difficulty = QuestionDifficulty.MEDIUM,
             link = "https://leetcode.cn/problems/kth-smallest-element-in-a-bst/description/?envType=study-plan-v2&envId=top-100-liked",

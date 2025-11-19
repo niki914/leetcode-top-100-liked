@@ -19,7 +19,7 @@ import java.util.List;
 public class D22 implements Day {
 
     @QuestionInfo(
-            name = "乘最多水的容器",
+            name = "盛最多水的容器",
             type = QuestionType.TwoPointers,
             difficulty = QuestionDifficulty.MEDIUM,
             link = "https://leetcode.cn/problems/container-with-most-water/?envType=study-plan-v2&envId=top-100-liked",

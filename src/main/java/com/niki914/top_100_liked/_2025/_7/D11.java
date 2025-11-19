@@ -71,7 +71,7 @@ public class D11 {
     }
 
     @QuestionInfo(
-            name = "实现前缀树",
+            name = "实现 Trie (前缀树)",
             type = QuestionType.Tree,
             difficulty = QuestionDifficulty.MEDIUM,
             link = "https://leetcode.cn/problems/implement-trie-prefix-tree/description/?envType=study-plan-v2&envId=top-100-liked"

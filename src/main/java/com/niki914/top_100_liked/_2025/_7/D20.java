@@ -11,7 +11,7 @@ import java.util.List;
 public class D20 {
 
     @QuestionInfo(
-            name = "N皇后",
+            name = "N 皇后",
             type = QuestionType.Backtracking,
             difficulty = QuestionDifficulty.HARD,
             link = "https://leetcode.cn/problems/n-queens/description/?envType=study-plan-v2&envId=top-100-liked"
