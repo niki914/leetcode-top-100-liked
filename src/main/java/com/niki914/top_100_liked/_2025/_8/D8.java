@@ -1,18 +1,27 @@
 package com.niki914.top_100_liked._2025._8;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked._2025._7.D30;
+import com.niki914.top_100_liked._2025._9.D10;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
 import java.util.Stack;
 
-public class D8 {
+@Link(
+        last = D30.class,
+        next = D10.class
+)
+public class D8 implements Day {
 
     @QuestionInfo(
             name = "字符串解码",
             type = QuestionType.Stack,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/decode-string/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/decode-string/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 3
     )
     public String decodeString(String s) {
         /*

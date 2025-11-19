@@ -69,7 +69,8 @@ public class D12 implements Day {
             name = "组合总和",
             type = QuestionType.Backtracking,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/combination-sum/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/combination-sum/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 4
     )
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();
@@ -104,7 +105,8 @@ public class D12 implements Day {
             name = "括号生成",
             type = QuestionType.Backtracking,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/generate-parentheses/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/generate-parentheses/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 5
     )
     public List<String> generateParenthesis(int n) {
         List<String> result = new ArrayList<>();

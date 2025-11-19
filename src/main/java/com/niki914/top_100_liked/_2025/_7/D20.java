@@ -1,20 +1,32 @@
 package com.niki914.top_100_liked._2025._7;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
+import com.niki914.top_100_liked.util.annotation.SuspendQuestion;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class D20 {
+@Link(
+        last = D18.class,
+        next = D21.class
+)
+public class D20 implements Day {
 
     @QuestionInfo(
             name = "N 皇后",
             type = QuestionType.Backtracking,
             difficulty = QuestionDifficulty.HARD,
-            link = "https://leetcode.cn/problems/n-queens/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/n-queens/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 8
+    )
+    @SuspendQuestion(
+            name = "N 皇后",
+            reason = "为求效率掠过困难题"
     )
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> solutions = new ArrayList<>();

@@ -1,16 +1,23 @@
 package com.niki914.top_100_liked._2025._7;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
-public class D22 {
+@Link(
+        last = D21.class,
+        next = D29.class
+)
+public class D22 implements Day {
 
     @QuestionInfo(
             name = "搜索旋转排序数组",
             type = QuestionType.Array,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/search-in-rotated-sorted-array/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/search-in-rotated-sorted-array/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 4
     )
     public int search(int[] nums, int target) {
         if (nums == null || nums.length == 0) return -1;
@@ -54,7 +61,8 @@ public class D22 {
             name = "寻找旋转排序数组中的最小值",
             type = QuestionType.Array,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 5
     )
     public int findMin(int[] nums) {
         int left = 0, right = nums.length - 1;

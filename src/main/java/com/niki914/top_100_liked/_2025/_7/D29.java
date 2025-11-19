@@ -1,5 +1,7 @@
 package com.niki914.top_100_liked._2025._7;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
@@ -7,13 +9,18 @@ import com.niki914.top_100_liked.util.annotation.SuspendQuestion;
 
 import java.util.Stack;
 
-public class D29 {
+@Link(
+        last = D22.class,
+        next = D30.class
+)
+public class D29 implements Day {
 
     @QuestionInfo(
             name = "寻找两个正序数组的中位数",
             type = QuestionType.Array,
             difficulty = QuestionDifficulty.HARD,
-            link = "https://leetcode.cn/problems/median-of-two-sorted-arrays/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/median-of-two-sorted-arrays/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 6
     )
     @SuspendQuestion(
             name = "寻找两个正序数组的中位数",
@@ -69,7 +76,8 @@ public class D29 {
             name = "有效的括号",
             type = QuestionType.Stack,
             difficulty = QuestionDifficulty.EASY,
-            link = "https://leetcode.cn/problems/valid-parentheses/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/valid-parentheses/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 1
     )
     public boolean isValid(String s) {
         // 使用栈存储左括号

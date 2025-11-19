@@ -1,18 +1,26 @@
 package com.niki914.top_100_liked._2025._7;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked._2025._8.D8;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
 import java.util.Stack;
 
-public class D30 {
+@Link(
+        last = D29.class,
+        next = D8.class
+)
+public class D30 implements Day {
 
     @QuestionInfo(
             name = "最小栈",
             type = QuestionType.Stack,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/min-stack/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/min-stack/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 2
     )
     static class MinStack {
         // 数据栈，存储所有元素

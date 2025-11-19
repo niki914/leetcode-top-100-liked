@@ -1,16 +1,23 @@
 package com.niki914.top_100_liked._2025._7;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
-public class D21 {
+@Link(
+        last = D20.class,
+        next = D22.class
+)
+public class D21 implements Day {
 
     @QuestionInfo(
             name = "搜索插入位置",
             type = QuestionType.Array,
             difficulty = QuestionDifficulty.EASY,
-            link = "https://leetcode.cn/problems/search-insert-position/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/search-insert-position/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 1
     )
     public int searchInsert(int[] nums, int target) {
         // 典型双指针 - 二分查找
@@ -35,7 +42,8 @@ public class D21 {
             name = "搜索二维矩阵",
             type = QuestionType.Array,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/search-in-a-2d-matrix/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/search-in-a-2d-matrix/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 2
     )
     public boolean searchMatrix(int[][] matrix, int target) {
         int rows = matrix.length, cols = matrix[0].length;
@@ -65,7 +73,8 @@ public class D21 {
             name = "在排序数组中查找元素的第一个和最后一个位置",
             type = QuestionType.Array,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 3
     )
     public int[] searchRange(int[] nums, int target) {
         int[] result = {-1, -1};

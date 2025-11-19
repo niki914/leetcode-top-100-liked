@@ -1,5 +1,7 @@
 package com.niki914.top_100_liked._2025._7;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
@@ -7,13 +9,18 @@ import com.niki914.top_100_liked.util.annotation.QuestionType;
 import java.util.ArrayList;
 import java.util.List;
 
-public class D18 {
+@Link(
+        last = D16.class,
+        next = D20.class
+)
+public class D18 implements Day {
 
     @QuestionInfo(
             name = "分割回文串",
             type = QuestionType.Backtracking,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/palindrome-partitioning/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/palindrome-partitioning/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 7
     )
     public List<List<String>> partition(String s) {
         List<List<String>> result = new ArrayList<>();

@@ -1,16 +1,23 @@
 package com.niki914.top_100_liked._2025._7;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
 
-public class D16 {
+@Link(
+        last = D12.class,
+        next = D18.class
+)
+public class D16 implements Day {
 
     @QuestionInfo(
             name = "单词搜索",
             type = QuestionType.Backtracking,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/word-search/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/word-search/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 6
     )
     public boolean exist(char[][] board, String word) {
         // 参数校验
