@@ -1,20 +1,29 @@
 package com.niki914.top_100_liked._2025._7;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked._2025._6.D3;
 import com.niki914.top_100_liked.beans.TreeNode;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
+import com.niki914.top_100_liked.util.annotation.SuspendQuestion;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class D10 {
+@Link(
+        last = D3.class,
+        next = D11.class
+)
+public class D10 implements Day {
 
     @QuestionInfo(
             name = "二叉树的最近公共祖先",
             type = QuestionType.Tree,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 14
     )
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         // 最近公共祖先的概念简直见名知意，不过这个祖先也可能是自己
@@ -42,7 +51,7 @@ public class D10 {
         }
 
         // 情况2
-        // 也可以说，左右节点其实是有且只有一个为空，因为是二叉树，这里返回那个非空的
+        // 也可以说，左右节点其实是有且只有一个为空，因为是二叉树。这里返回那个非空的
         return left != null ? left : right;
     }
 
@@ -51,6 +60,10 @@ public class D10 {
             type = QuestionType.Tree,
             difficulty = QuestionDifficulty.HARD,
             link = "https://leetcode.cn/problems/binary-tree-maximum-path-sum/description/?envType=study-plan-v2&envId=top-100-liked"
+    )
+    @SuspendQuestion(
+            name = "二叉树中的最大路径和",
+            reason = "为求效率掠过困难题"
     )
     public static class MaxPathSum {
         private int maxSum = Integer.MIN_VALUE;
@@ -93,7 +106,8 @@ public class D10 {
             name = "岛屿数量",
             type = QuestionType.Graph,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/number-of-islands/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/number-of-islands/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 1
     )
     public int numIslands(char[][] grid) {
         if (grid == null || grid.length == 0) return 0;
@@ -142,7 +156,8 @@ public class D10 {
             name = "腐烂的橘子",
             type = QuestionType.Graph,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/rotting-oranges/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/rotting-oranges/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 2
     )
     public int orangesRotting(int[][] grid) {
         // 常量定义，提高可读性

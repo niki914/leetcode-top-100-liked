@@ -2,15 +2,15 @@ package com.niki914.top_100_liked
 
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty
 import com.niki914.top_100_liked.util.annotation.QuestionType
-import com.niki914.top_100_liked.util.finder.QuestionFinder
+import com.niki914.top_100_liked.util.kotlin.QuestionFinder
 
 class QuestionQuery {
     private val finder = QuestionFinder()
 
-    fun getAll() = finder.find { true }
+    fun getAll() = finder.scan { true }
 
     fun findByKeywords(keyword: String) =
-        finder.find {
+        finder.scan {
             val set = mutableSetOf<String>(
                 it.name,
                 it.type.toString(),
@@ -26,19 +26,19 @@ class QuestionQuery {
             set.any { str -> str.contains(keyword) }
         }
 
-    fun findByName(name: String) = finder.find {
+    fun findByName(name: String) = finder.scan {
         it.name == name || it.name.contains(name)
     }
 
-    fun findByNum(num: Int) = finder.find {
+    fun findByNum(num: Int) = finder.scan {
         it.numberInType != -1 && it.numberInType == num
     }
 
-    fun findByType(type: QuestionType) = finder.find {
+    fun findByType(type: QuestionType) = finder.scan {
         it.type == type
     }
 
-    fun findByDifficulty(difficulty: QuestionDifficulty) = finder.find {
+    fun findByDifficulty(difficulty: QuestionDifficulty) = finder.scan {
         it.difficulty == difficulty
     }
 }

@@ -35,7 +35,20 @@ fun main() { // query questions at runtime
     }
 
     queryList.forEach {
-        println(it)
+        val sb = StringBuilder()
+        sb.apply {
+            append(it.annotation.name)
+            append(": ")
+            append(it.className)
+            append(".")
+            append(it.methodName)
+            append("(")
+            append(it.simpleClassName)
+            append(".java:")
+            append(it.lineNumber)
+            append(")")
+        }
+        println(sb.toString())
     }
     println("共 " + queryList.size + " 题")
 }
