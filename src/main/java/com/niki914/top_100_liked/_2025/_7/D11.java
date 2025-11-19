@@ -1,5 +1,7 @@
 package com.niki914.top_100_liked._2025._7;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
@@ -9,13 +11,18 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class D11 {
+@Link(
+        last = D10.class,
+        next = D12.class
+)
+public class D11 implements Day {
 
     @QuestionInfo(
             name = "课程表",
             type = QuestionType.Graph,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/course-schedule/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/course-schedule/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 3
     )
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         // 构建邻接表和入度数组
@@ -74,7 +81,8 @@ public class D11 {
             name = "实现 Trie (前缀树)",
             type = QuestionType.Tree,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/implement-trie-prefix-tree/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/implement-trie-prefix-tree/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 4
     )
     static class Trie {
         // 内部节点类，表示Trie中的每个节点
@@ -141,7 +149,8 @@ public class D11 {
             name = "全排列",
             type = QuestionType.Backtracking,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/permutations/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/permutations/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 1
     )
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
@@ -186,6 +195,11 @@ public class D11 {
             if (current.contains(num)) {
                 continue;
             }
+
+            /*
+            回溯标准格式： add backtrack remove
+             */
+
             // 选择当前数字
             current.add(num);
             // 递归生成后续排列
@@ -199,7 +213,8 @@ public class D11 {
             name = "子集",
             type = QuestionType.Backtracking,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/subsets/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/subsets/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 2
     )
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();

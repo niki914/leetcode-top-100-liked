@@ -1,5 +1,7 @@
 package com.niki914.top_100_liked._2025._7;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
@@ -7,13 +9,18 @@ import com.niki914.top_100_liked.util.annotation.QuestionType;
 import java.util.ArrayList;
 import java.util.List;
 
-public class D12 {
+@Link(
+        last = D11.class,
+        next = D16.class
+)
+public class D12 implements Day {
 
     @QuestionInfo(
             name = "电话号码的字母组合",
             type = QuestionType.Backtracking,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/letter-combinations-of-a-phone-number/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/letter-combinations-of-a-phone-number/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 3
     )
     public List<String> letterCombinations(String digits) {
         // 如果输入为空，返回空列表
