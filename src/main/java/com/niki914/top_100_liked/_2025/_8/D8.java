@@ -7,6 +7,7 @@ import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
+import com.niki914.top_100_liked.util.annotation.SuspendQuestion;
 
 import java.util.Stack;
 
@@ -23,6 +24,7 @@ public class D8 implements Day {
             link = "https://leetcode.cn/problems/decode-string/description/?envType=study-plan-v2&envId=top-100-liked",
             numberInType = 3
     )
+    @SuspendQuestion()
     public String decodeString(String s) {
         /*
         3[a2[c]] -> accaccacc"

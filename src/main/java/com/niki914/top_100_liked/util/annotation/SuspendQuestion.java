@@ -10,6 +10,7 @@ import java.lang.annotation.Target;
 // 注解保留到运行时，以便反射读取
 @Retention(RetentionPolicy.RUNTIME)
 public @interface SuspendQuestion {
-    String name(); // 题目名称
-    String reason(); // 未完成的原因
+    String name() default "未命名"; // 题目名称
+
+    String reason() default "跳过"; // 未完成的原因
 }

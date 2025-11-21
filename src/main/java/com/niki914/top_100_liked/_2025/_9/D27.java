@@ -18,7 +18,7 @@ public class D27 {
         // 将 wordDict 转为 Set 加速查找
         Set<String> wordSet = new HashSet<>(wordDict);
         int n = s.length();
-        // dp[i] 表示 s[0:i) 能否被拼接
+        // dp[i] 表示 sub string [0, i) 能否被拼接
         boolean[] dp = new boolean[n + 1];
         // 空字符串可以拼接
         /*

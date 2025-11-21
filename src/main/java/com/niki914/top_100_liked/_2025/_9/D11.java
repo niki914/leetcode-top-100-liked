@@ -1,5 +1,7 @@
 package com.niki914.top_100_liked._2025._9;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
@@ -8,32 +10,83 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
-public class D11 {
+@Link(
+        last = D10.class,
+        next = D12.class
+)
+public class D11 implements Day {
 
     @QuestionInfo(
             name = "数组中的第K个最大元素",
             type = QuestionType.Heap,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/kth-largest-element-in-an-array/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/kth-largest-element-in-an-array/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 1
     )
     public int findKthLargest(int[] nums, int k) {
-        // 创建最小堆，容量为 k
-        MinHeap minHeap = new MinHeap(k);
+        // 目标是找到升序排序后，索引为 N - k 的元素
+        int targetIndex = nums.length - k;
+        int left = 0;
+        int right = nums.length - 1;
 
-        // 遍历数组
-        for (int num : nums) {
-            minHeap.offer(num); // 插入（维护小顶堆的顺序）
+        while (true) {
+            // 执行分区操作，返回枢轴元素最终的位置索引
+            int pivotIndex = partition(nums, left, right);
 
-            // 保持堆大小为 k
-            // 只从前面（小值）移除
-            if (minHeap.size() > k) {
-                minHeap.poll(); // 移除最小元素
+            if (pivotIndex == targetIndex) {
+                // 找到了目标位置
+                return nums[pivotIndex];
+            } else if (pivotIndex < targetIndex) {
+                // 枢轴位置太靠前，目标在右侧（更大索引）
+                left = pivotIndex + 1;
+            } else {
+                // 枢轴位置太靠后，目标在左侧（更小索引）
+                right = pivotIndex - 1;
+            }
+        }
+    }
+
+    // 快速排序的分区操作（将小于枢轴的元素放在左边，大于枢轴的元素放在右边）
+    private int partition(int[] nums, int left, int right) {
+        int pivot = nums[left]; // 选择最左边的元素作为枢轴
+        int j = left; // j 用来追踪小于等于 pivot 的元素的边界
+
+        // 遍历 [left + 1, right]，将所有小于等于 pivot 的元素移动到左边
+        for (int i = left + 1; i <= right; i++) {
+            if (nums[i] <= pivot) {
+                j++;
+                swap(nums, i, j);
             }
         }
 
-        // 堆顶，也就是最小的，此处刚好为第 k 大的
-        return minHeap.peek();
+        // 交换枢轴元素到最终位置
+        swap(nums, left, j);
+        return j; // 返回枢轴元素最终的索引
     }
+
+    private void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+
+//        // 创建最小堆，容量为 k
+//        MinHeap minHeap = new MinHeap(k);
+//
+//        // 遍历数组
+//        for (int num : nums) {
+//            minHeap.offer(num); // 插入（维护小顶堆的顺序）
+//
+//            // 保持堆大小为 k
+//            // 只从前面（小值）移除
+//            if (minHeap.size() > k) {
+//                minHeap.poll(); // 移除最小元素
+//            }
+//        }
+//
+//        // 堆顶，也就是最小的，此处刚好为第 k 大的
+//        return minHeap.peek();
+//    }
 
     static class MinHeap {
         private int[] heap; // 存储堆的数组

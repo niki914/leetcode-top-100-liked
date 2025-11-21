@@ -1,5 +1,8 @@
 package com.niki914.top_100_liked._2025._9;
 
+import com.niki914.top_100_liked.Day;
+import com.niki914.top_100_liked._2025._8.D8;
+import com.niki914.top_100_liked.util.annotation.Link;
 import com.niki914.top_100_liked.util.annotation.QuestionDifficulty;
 import com.niki914.top_100_liked.util.annotation.QuestionInfo;
 import com.niki914.top_100_liked.util.annotation.QuestionType;
@@ -7,12 +10,17 @@ import com.niki914.top_100_liked.util.annotation.SuspendQuestion;
 
 import java.util.Stack;
 
-public class D10 {
+@Link(
+        last = D8.class,
+        next = D11.class
+)
+public class D10 implements Day {
     @QuestionInfo(
             name = "每日温度",
             type = QuestionType.Array,
             difficulty = QuestionDifficulty.MEDIUM,
-            link = "https://leetcode.cn/problems/daily-temperatures/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/daily-temperatures/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 4
     )
     public int[] dailyTemperatures(int[] temperatures) {
         int n = temperatures.length;
@@ -41,7 +49,9 @@ public class D10 {
             name = "柱状图中最大的矩形",
             type = QuestionType.Array,
             difficulty = QuestionDifficulty.HARD,
-            link = "https://leetcode.cn/problems/largest-rectangle-in-histogram/description/?envType=study-plan-v2&envId=top-100-liked"
+            link = "https://leetcode.cn/problems/largest-rectangle-in-histogram/description/?envType=study-plan-v2&envId=top-100-liked",
+            numberInType = 5
+
     )
     @SuspendQuestion(
             name = "柱状图中最大的矩形",
